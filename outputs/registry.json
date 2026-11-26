@@ -1,0 +1,1362 @@
+{
+  "project": "木刻作品口述稿中的创作者和版本沿袭",
+  "material_nature": "本地合成演练资料",
+  "corpus": {
+    "project": "木刻作品口述稿中的创作者和版本沿袭",
+    "material_title": "口述稿、作品卡与讲义版本",
+    "material_nature": "本地合成演练资料",
+    "records": [
+      {
+        "kind": "person",
+        "id": "p1",
+        "text": "贺昆|版画教师。"
+      },
+      {
+        "kind": "person",
+        "id": "p2",
+        "text": "周敏|参展学员，作品C12署个人名。"
+      },
+      {
+        "kind": "work",
+        "id": "w1",
+        "text": "作品C12|单块板多色套印，作品卡记周敏创作，贺昆导师。"
+      },
+      {
+        "kind": "quote",
+        "id": "q1",
+        "text": "口述录音00:43|“边刻边印，最后一版的时候，版已经用完了。”"
+      },
+      {
+        "kind": "quote",
+        "id": "q2",
+        "text": "口述录音01:12|“他把它刻毁了，这种红土出来的刀痕就不能再补。”"
+      },
+      {
+        "kind": "card",
+        "id": "c1",
+        "text": "技术卡旧版|绝版木刻边刻边印、逐版递减，全部套色后母版刻毁，无法重复印制。"
+      },
+      {
+        "kind": "guide",
+        "id": "g1",
+        "text": "展厅初稿|贺昆刻出的最后一版最终摧毁了母版。"
+      },
+      {
+        "kind": "lesson",
+        "id": "l1",
+        "text": "课堂材料|同文引用 q2，改称 C12 是教师示范后共同制作。"
+      },
+      {
+        "kind": "archive",
+        "id": "a1",
+        "text": "录音目录|q1 说话人为周敏，q2 为贺昆，两段不是同一次访谈。"
+      }
+    ]
+  },
+  "knowledge": {
+    "schema": "woodcut-knowledge/1",
+    "note": "本文件是在 data/corpus.json 原始记录之上的人工复核层。所有 source_ids 必须是 corpus.json 中存在的记录号；候选与判断分开存放，候选不得因释文顺畅而删除。",
+    "interviews": [
+      {
+        "id": "int:zhou",
+        "speaker_id": "person:zhoumin",
+        "catalog_ref": "a1",
+        "quote_record_ids": [
+          "q1"
+        ],
+        "note": "据 a1：q1 说话人为周敏。"
+      },
+      {
+        "id": "int:he",
+        "speaker_id": "person:hekun",
+        "catalog_ref": "a1",
+        "quote_record_ids": [
+          "q2"
+        ],
+        "note": "据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。"
+      }
+    ],
+    "people": [
+      {
+        "id": "person:hekun",
+        "name": "贺昆",
+        "source_ids": [
+          "p1"
+        ],
+        "roles": [
+          "版画教师"
+        ],
+        "oral_speaker_of": [
+          "stmt:q2"
+        ],
+        "review_note": "p1 只证明其版画教师身份；‘C12 刻版者/毁版者’来自展厅稿 g1/h0 的断言或 q2 中未落实的‘他’，不能并入人物身份事实。"
+      },
+      {
+        "id": "person:zhoumin",
+        "name": "周敏",
+        "source_ids": [
+          "p2",
+          "a1"
+        ],
+        "roles": [
+          "参展学员",
+          "C12 署名创作者"
+        ],
+        "oral_speaker_of": [
+          "stmt:q1"
+        ],
+        "review_note": "p2 记其为参展学员且 C12 署个人名；a1 记 q1 说话人为周敏。"
+      }
+    ],
+    "works": [
+      {
+        "id": "work:c12",
+        "inventory_no": "C12",
+        "title": null,
+        "source_ids": [
+          "w1",
+          "p2"
+        ],
+        "creation": {
+          "creator_id": "person:zhoumin",
+          "status": "card_recorded",
+          "basis_ids": [
+            "w1",
+            "p2"
+          ]
+        },
+        "mentor_ids": [
+          "person:hekun"
+        ],
+        "technique_summary": "单块板多色套印（w1）；可与 c1 所述绝版木刻‘边刻边印、逐版递减、母版刻毁’互参，但 c1 未标 C12 编号，只是技术语境证据。",
+        "lineage": [
+          {
+            "id": "lineage:c12:he-to-zhou",
+            "from_person_id": "person:hekun",
+            "to_person_id": "person:zhoumin",
+            "kind": "technique_lineage",
+            "technique": "绝版木刻 / 单块板多色套印技艺沿袭",
+            "setting": "师生共展作品卡",
+            "source_ids": [
+              "w1",
+              "p2"
+            ],
+            "rule": "技艺沿袭把师生双方连到同一技艺脉络，但不把学员作品的创作权或所有权转移给教师。"
+          }
+        ],
+        "attribution_claims": [
+          {
+            "id": "claim:l1-joint",
+            "source_id": "l1",
+            "text": "教师示范后共同制作",
+            "status": "conflicting_unverified",
+            "handling": "这是课程改写稿中的对立主张，原样保留并回链 l1；在没有示范记录、共同制作证据或原件题款之前，不得据此改写 w1/p2 所记的周敏创作与署名，也不得反向删除该主张。"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "id": "block:c12",
+        "work_id": "work:c12",
+        "label": "C12 套色母版（w1 所称‘单块板’）",
+        "source_ids": [
+          "w1",
+          "c1",
+          "q1"
+        ],
+        "scope_warnings": [
+          "w1 直接证明 C12 为单块板多色套印。",
+          "c1 原文未出现 C12 编号，‘母版’表述属于技术卡旧版的通说，作为语境证据使用。"
+        ]
+      }
+    ],
+    "candidate_entities": [
+      {
+        "id": "entity:c12:sheet-prev",
+        "kind": "printed_sheet",
+        "label": "上一张印纸（代词‘它’的候选所指，并非已登记原件）",
+        "status": "hypothetical_candidate",
+        "source_ids": [],
+        "warning": "语料中没有 C12 张号或上一张印纸的原件编号，该实体只能作为代词候选存在，不能被坐实为某张藏品。"
+      },
+      {
+        "id": "entity:unnamed:ta-q2",
+        "kind": "unidentified_person",
+        "label": "q2 中‘他’所指的未具名刻者",
+        "status": "hypothetical_candidate",
+        "source_ids": [
+          "q2"
+        ],
+        "warning": "q2 说话人是贺昆，但引句主语是‘他’；不能仅因展厅稿 g1 就把‘他’链接为贺昆。"
+      }
+    ],
+    "block_states": [
+      {
+        "id": "state:c12:sequence",
+        "block_id": "block:c12",
+        "ordinal": "sequence",
+        "label": "边刻边印、逐版递减的系列刻印状态",
+        "source_ids": [
+          "c1",
+          "q1"
+        ]
+      },
+      {
+        "id": "state:c12:final",
+        "block_id": "block:c12",
+        "ordinal": "last",
+        "label": "最后一版 / 最后套色版次（母版刻尽的终点状态）",
+        "source_ids": [
+          "q1",
+          "c1"
+        ]
+      },
+      {
+        "id": "state:c12:red-earth-layer",
+        "block_id": "block:c12",
+        "ordinal": "unknown",
+        "label": "‘红土’色层及其刀痕（处于哪一版次无编号可考）",
+        "source_ids": [
+          "q2"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": "event:c12:creation",
+        "type": "creation",
+        "type_label": "创作",
+        "label": "C12 创作（构图/起稿与署名意义上的创作行为）",
+        "work_id": "work:c12",
+        "actors": [
+          {
+            "person_id": "person:zhoumin",
+            "role": "creator"
+          }
+        ],
+        "evidence_ids": [
+          "w1",
+          "p2"
+        ],
+        "conflicting_claim_ids": [
+          "claim:l1-joint"
+        ],
+        "term_ids": [],
+        "event_date": null,
+        "note": "创作事件与刻版、套印分开；录音时间 00:43/01:12 是访谈录音位置，不是创作或制作日期。"
+      },
+      {
+        "id": "event:c12:carve-process",
+        "type": "carving",
+        "type_label": "刻版",
+        "label": "边刻边印、逐版递减的刻版过程",
+        "work_id": "work:c12",
+        "block_id": "block:c12",
+        "block_state_id": "state:c12:sequence",
+        "actors": [],
+        "evidence_ids": [
+          "q1",
+          "c1"
+        ],
+        "term_ids": [
+          "term:ban"
+        ],
+        "event_date": null
+      },
+      {
+        "id": "event:c12:overprint-last",
+        "type": "overprinting",
+        "type_label": "套印",
+        "label": "最后版次套印（‘最后一版印完’）",
+        "work_id": "work:c12",
+        "block_id": "block:c12",
+        "block_state_id": "state:c12:final",
+        "actors": [],
+        "evidence_ids": [
+          "q1"
+        ],
+        "term_ids": [
+          "term:ban"
+        ],
+        "event_date": null,
+        "note": "这是同一母版的最后套色状态，不是另一件作品，也不是按张计数的最后一张。"
+      },
+      {
+        "id": "event:c12:carve-red-earth",
+        "type": "carving",
+        "type_label": "刻版",
+        "label": "刻出‘红土’ / 红土色层刀痕不可补",
+        "work_id": "work:c12",
+        "block_id": "block:c12",
+        "block_state_id": "state:c12:red-earth-layer",
+        "actors": [],
+        "asserted_actors": [
+          {
+            "person_id": "person:hekun",
+            "by": "h0",
+            "status": "script_assertion_only"
+          }
+        ],
+        "evidence_ids": [
+          "q2"
+        ],
+        "term_ids": [
+          "term:ban"
+        ],
+        "event_date": null,
+        "note": "红土色层与‘最后一版/毁版’的先后没有完整语境或张号可以排定，不能为顺句而固定时序。"
+      },
+      {
+        "id": "event:c12:block-destroyed",
+        "type": "block_destruction",
+        "type_label": "母版刻毁",
+        "label": "全部套色后母版刻毁 / ‘把它刻毁了’",
+        "work_id": "work:c12",
+        "block_id": "block:c12",
+        "block_state_id": "state:c12:final",
+        "actors": [],
+        "asserted_actors": [
+          {
+            "person_id": "person:hekun",
+            "by": "g1",
+            "status": "museum_draft_claim"
+          }
+        ],
+        "evidence_ids": [
+          "c1",
+          "q2",
+          "g1"
+        ],
+        "term_ids": [
+          "term:ban"
+        ],
+        "event_date": null,
+        "note": "绝版木刻中刻毁是最后阶段的端点，可与最后刻印状态相连，但‘毁版’事件与‘最后套印’事件仍分别登记，不折叠成同一句顺承事实。"
+      },
+      {
+        "id": "event:c12:exhibit",
+        "type": "exhibition",
+        "type_label": "展览",
+        "label": "师生共展（C12 参展）",
+        "work_id": "work:c12",
+        "actors": [
+          {
+            "person_id": "person:zhoumin",
+            "role": "参展学员/署名创作者"
+          },
+          {
+            "person_id": "person:hekun",
+            "role": "导师/版画教师"
+          }
+        ],
+        "evidence_ids": [
+          "p2",
+          "w1"
+        ],
+        "term_ids": [],
+        "event_date": null,
+        "note": "展览关系同时呈现师生双方与技艺沿袭，但不产生创作权或收藏归属的转移。"
+      }
+    ],
+    "coverage_gaps": [
+      {
+        "type": "collection",
+        "type_label": "收藏",
+        "work_id": "work:c12",
+        "source_ids": [],
+        "note": "现有 9 条语料没有任何 C12 收藏机构、入藏号或收藏时间；只登记‘材料缺口’，不虚构收藏事件。"
+      }
+    ],
+    "statements": [
+      {
+        "id": "stmt:q1",
+        "source_id": "q1",
+        "kind": "oral_quote",
+        "speaker_id": "person:zhoumin",
+        "timestamp": "00:43",
+        "interview_id": "int:zhou",
+        "verbatim": "边刻边印，最后一版的时候，版已经用完了。",
+        "references": [],
+        "about_work_ids": [
+          "work:c12"
+        ],
+        "linked_event_ids": [
+          "event:c12:carve-process",
+          "event:c12:overprint-last"
+        ]
+      },
+      {
+        "id": "stmt:q2",
+        "source_id": "q2",
+        "kind": "oral_quote",
+        "speaker_id": "person:hekun",
+        "timestamp": "01:12",
+        "interview_id": "int:he",
+        "verbatim": "他把它刻毁了，这种红土出来的刀痕就不能再补。",
+        "references": [],
+        "about_work_ids": [
+          "work:c12"
+        ],
+        "linked_event_ids": [
+          "event:c12:block-destroyed",
+          "event:c12:carve-red-earth"
+        ]
+      },
+      {
+        "id": "stmt:c1",
+        "source_id": "c1",
+        "kind": "technique_card",
+        "speaker_id": null,
+        "timestamp": null,
+        "interview_id": null,
+        "verbatim": "绝版木刻边刻边印、逐版递减，全部套色后母版刻毁，无法重复印制。",
+        "references": [],
+        "about_work_ids": [
+          "work:c12"
+        ],
+        "linked_event_ids": [
+          "event:c12:carve-process",
+          "event:c12:block-destroyed"
+        ]
+      },
+      {
+        "id": "stmt:g1",
+        "source_id": "g1",
+        "kind": "hall_draft",
+        "speaker_id": null,
+        "timestamp": null,
+        "interview_id": null,
+        "verbatim": "贺昆刻出的最后一版最终摧毁了母版。",
+        "references": [
+          "stmt:q2"
+        ],
+        "about_work_ids": [
+          "work:c12"
+        ],
+        "linked_event_ids": [
+          "event:c12:overprint-last",
+          "event:c12:block-destroyed"
+        ]
+      },
+      {
+        "id": "stmt:l1",
+        "source_id": "l1",
+        "kind": "lesson_rewrite",
+        "speaker_id": null,
+        "timestamp": null,
+        "interview_id": null,
+        "verbatim": "同文引用 q2，改称 C12 是教师示范后共同制作。",
+        "references": [
+          "stmt:q2"
+        ],
+        "about_work_ids": [
+          "work:c12"
+        ],
+        "linked_event_ids": [
+          "event:c12:creation"
+        ]
+      },
+      {
+        "id": "stmt:h0",
+        "source_id": null,
+        "kind": "hall_script_current",
+        "speaker_id": null,
+        "timestamp": null,
+        "interview_id": null,
+        "provenance": "馆方提供的现行展厅口述稿起首句（任务开篇所引）；data/corpus.json 未单列此句。原样保留，不改字、不消歧。该句拼合了 q1（00:43 周敏）与 q2（01:12 贺昆）两处不同访谈的母题。",
+        "verbatim": "最后一版印完，母版便毁了，贺昆在它上面刻出红土。",
+        "references": [
+          "stmt:q1",
+          "stmt:q2",
+          "stmt:g1"
+        ],
+        "about_work_ids": [
+          "work:c12"
+        ],
+        "linked_event_ids": [
+          "event:c12:overprint-last",
+          "event:c12:block-destroyed",
+          "event:c12:carve-red-earth"
+        ]
+      }
+    ],
+    "mentions": [
+      {
+        "id": "m:q1:last-ban",
+        "statement_id": "stmt:q1",
+        "anchor": "最后一版",
+        "kind": "quantity_or_term",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "sense:ban:state",
+            "label": "套色版次：同一母版最后刻印状态/色层",
+            "strength": "strong",
+            "support_ids": [
+              "q1",
+              "c1"
+            ]
+          },
+          {
+            "value": "sense:ban:sheet_count",
+            "label": "张数/印数：最后一张或最后一批印件",
+            "strength": "weak",
+            "support_ids": []
+          },
+          {
+            "value": "sense:ban:edition",
+            "label": "出版物版本/版次",
+            "strength": "unsupported",
+            "support_ids": []
+          }
+        ],
+        "v1_link": {
+          "chosen": "sense:ban:plate_or_version",
+          "basis": "旧术语解释把‘版’当作最后刻出的一块板或一个完整版本。"
+        }
+      },
+      {
+        "id": "m:q1:ban-used-up",
+        "statement_id": "stmt:q1",
+        "anchor": "版已经用完了",
+        "kind": "term_and_entity",
+        "term_id": "term:ban",
+        "entity_candidates": [
+          "block:c12"
+        ],
+        "candidates": [
+          {
+            "value": "sense:ban:state_exhausted",
+            "label": "逐版刻到终点，母版板面已被刻尽（‘用完’）",
+            "strength": "strong",
+            "support_ids": [
+              "q1",
+              "c1"
+            ]
+          },
+          {
+            "value": "sense:ban:sheet_count",
+            "label": "纸张/印数用完",
+            "strength": "unsupported",
+            "support_ids": []
+          }
+        ],
+        "v1_link": {
+          "chosen": "entity:block:c12",
+          "basis": "旧链接已指向母版，但未区分‘板被刻尽’与‘版次结束’。"
+        }
+      },
+      {
+        "id": "m:q2:ta",
+        "statement_id": "stmt:q2",
+        "anchor": "他",
+        "kind": "pronoun_person",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "entity:unnamed:ta-q2",
+            "label": "未具名的男性刻者（语法上的第三人称，默认候选）",
+            "strength": "strong",
+            "support_ids": [
+              "q2"
+            ]
+          },
+          {
+            "value": "person:hekun",
+            "label": "贺昆以‘他’自指或泛称刻者（推测，无直接证据）",
+            "strength": "speculative",
+            "support_ids": [
+              "a1"
+            ]
+          }
+        ],
+        "v1_link": {
+          "chosen": "person:hekun",
+          "basis": "展厅初稿 g1 为求叙事顺畅，把 q2 的‘他’与贺昆直接合并。",
+          "smoothness_driven": true
+        }
+      },
+      {
+        "id": "m:q2:it",
+        "statement_id": "stmt:q2",
+        "anchor": "它",
+        "kind": "pronoun_object",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "block:c12",
+            "label": "C12 母版（‘刻毁’与 c1‘母版刻毁’搭配一致）",
+            "strength": "strong",
+            "support_ids": [
+              "q2",
+              "c1"
+            ]
+          },
+          {
+            "value": "state:c12:final",
+            "label": "最后版次的板面状态（与母版同一实体的状态描述）",
+            "strength": "medium",
+            "support_ids": [
+              "q1",
+              "c1"
+            ]
+          },
+          {
+            "value": "entity:c12:sheet-prev",
+            "label": "印纸（‘刻毁纸张’搭配异常，仅保留为候选）",
+            "strength": "weak",
+            "support_ids": []
+          }
+        ],
+        "v1_link": {
+          "chosen": "block:c12",
+          "basis": "旧链接指向母版，方向与证据相容，但未保留候选与裁定理由。"
+        }
+      },
+      {
+        "id": "m:q2:red-earth",
+        "statement_id": "stmt:q2",
+        "anchor": "红土",
+        "kind": "color_layer",
+        "term_id": "term:ban",
+        "entity_candidates": [
+          "state:c12:red-earth-layer"
+        ],
+        "candidates": [
+          {
+            "value": "state:c12:red-earth-layer",
+            "label": "名为‘红土’的套色色层/颜料及其刀痕",
+            "strength": "strong",
+            "support_ids": [
+              "q2"
+            ]
+          }
+        ],
+        "v1_link": {
+          "chosen": "state:c12:red-earth-layer",
+          "basis": "链接本身成立，但旧稿常把它擅自排到毁版之前/之后的固定位置。"
+        }
+      },
+      {
+        "id": "m:g1:last-ban",
+        "statement_id": "stmt:g1",
+        "anchor": "贺昆刻出的最后一版",
+        "kind": "quantity_or_term",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "sense:ban:state",
+            "label": "最后套色版次（同一母版的最终刻印状态）",
+            "strength": "strong",
+            "support_ids": [
+              "c1",
+              "q1"
+            ]
+          },
+          {
+            "value": "sense:ban:plate_or_version",
+            "label": "最后一块板/一个独立版本（旧解释，易导致把状态当成新实体）",
+            "strength": "rejected_after_revision",
+            "support_ids": [
+              "g1"
+            ]
+          }
+        ],
+        "v1_link": {
+          "chosen": "sense:ban:plate_or_version",
+          "basis": "展厅初稿把‘最后一版’实体化为贺昆刻出的一块/一版。"
+        }
+      },
+      {
+        "id": "m:g1:agent-hekun",
+        "statement_id": "stmt:g1",
+        "anchor": "贺昆刻出 / 摧毁",
+        "kind": "agent_link",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "person:hekun",
+            "label": "贺昆（仅为 g1 的馆方断言；q2 原作‘他’，说话人虽为贺昆但不能直接划等号）",
+            "strength": "museum_claim_only",
+            "support_ids": [
+              "g1"
+            ]
+          },
+          {
+            "value": "entity:unnamed:ta-q2",
+            "label": "q2 中未具名的‘他’",
+            "strength": "open",
+            "support_ids": [
+              "q2"
+            ]
+          }
+        ],
+        "v1_link": {
+          "chosen": "person:hekun",
+          "basis": "旧稿为顺承叙事把刻版/毁版行为人固定为贺昆。",
+          "smoothness_driven": true
+        }
+      },
+      {
+        "id": "m:h0:last-ban",
+        "statement_id": "stmt:h0",
+        "anchor": "最后一版",
+        "kind": "quantity_or_term",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "sense:ban:state",
+            "label": "套色版次：母版最后刻印状态",
+            "strength": "strong",
+            "support_ids": [
+              "q1",
+              "c1"
+            ]
+          },
+          {
+            "value": "sense:ban:sheet_count",
+            "label": "张数：最后一张印纸（若附近有张号才能裁定）",
+            "strength": "weak",
+            "support_ids": []
+          }
+        ],
+        "v1_link": {
+          "chosen": "sense:ban:plate_or_version",
+          "basis": "现行展厅句沿用旧‘版’解释。"
+        }
+      },
+      {
+        "id": "m:h0:it",
+        "statement_id": "stmt:h0",
+        "anchor": "它",
+        "kind": "pronoun_object",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "block:c12",
+            "label": "母版（紧邻前词；‘在板上刻’与刻版动作相容）",
+            "strength": "medium",
+            "support_ids": [
+              "c1"
+            ]
+          },
+          {
+            "value": "entity:c12:sheet-prev",
+            "label": "上一张印纸（若指印纸则应是套印关系，不能‘刻’纸；但原句本身时序矛盾，不能为此删除该候选）",
+            "strength": "medium",
+            "support_ids": []
+          }
+        ],
+        "v1_link": {
+          "chosen": "block:c12",
+          "basis": "旧释文为让‘贺昆在它上面刻出红土’顺畅，把‘它’唯一固定为母版。",
+          "smoothness_driven": true
+        },
+        "conflict": "原句先言‘母版便毁了’，再言‘在它上面刻’：若‘它’=母版，则毁版之后不能再刻，时序自相矛盾；若‘它’=印纸，则与‘刻’的工具动作及 q2‘刀痕’不合。句子本身必须拆分重写，不能靠选定代词掩盖冲突。"
+      },
+      {
+        "id": "m:h0:agent-hekun",
+        "statement_id": "stmt:h0",
+        "anchor": "贺昆",
+        "kind": "agent_link",
+        "term_id": "term:ban",
+        "candidates": [
+          {
+            "value": "person:hekun",
+            "label": "贺昆（展厅句断言的红土刻制行为人）",
+            "strength": "museum_claim_only",
+            "support_ids": [
+              "g1"
+            ]
+          },
+          {
+            "value": "entity:unnamed:ta-q2",
+            "label": "q2 的未具名‘他’，不能自动等同于贺昆",
+            "strength": "open",
+            "support_ids": [
+              "q2",
+              "a1"
+            ]
+          }
+        ],
+        "v1_link": {
+          "chosen": "person:hekun",
+          "basis": "为使句子顺畅，直接把贺昆固定为‘刻出红土’的主语。",
+          "smoothness_driven": true
+        }
+      }
+    ],
+    "quantity_expression_rules": [
+      {
+        "anchors": [
+          "一张"
+        ],
+        "literal_sense": "sense:ban:sheet_count",
+        "rule": "‘一张’默认是纸张/成品张数，不是版次；是否指某一版次的样张，要看附近完整语境与原件张号。C12 语料只有作品编号 C12，没有任何张号，因此凡遇‘一张’而无邻近语境者，只能保留‘张数’读法并登记张数不可考，不能进位成‘一版’。",
+        "numbering_available": [
+          "C12（作品/藏品编号，非张号）"
+        ],
+        "sheet_numbering_available": []
+      },
+      {
+        "anchors": [
+          "最后一版"
+        ],
+        "literal_sense": "sense:ban:state",
+        "rule": "在绝版木刻语境，且附近有 c1‘逐版递减、母版刻毁’与 q1‘版已经用完了’互证时，裁定为同一母版的最后套色版次/刻印状态；若附近出现张号或‘一张……’对举，则需重新在版次与张数之间裁定。",
+        "numbering_available": [
+          "C12"
+        ],
+        "sheet_numbering_available": []
+      }
+    ],
+    "terms": [
+      {
+        "id": "term:ban",
+        "term": "版",
+        "current_version": 1,
+        "versions": [
+          {
+            "version": 1,
+            "label": "旧术语解释",
+            "definition": "‘版’指印版；‘最后一版’被解作最后刻出的一块板或一个完整版本，该版印完后母版被摧毁。",
+            "source_ids": [
+              "g1"
+            ],
+            "known_problem": "容易把逐版递减的同一母版误实体化为先后不同的新版/独立作品，并把 g1/h0 的顺承叙事当成制作事实。"
+          }
+        ],
+        "revision": {
+          "version": 2,
+          "label": "修订术语解释",
+          "definition": "在绝版木刻中，‘版’首先指套色版次，即同一母版边刻边印、逐版递减过程中的一个刻印状态或色层；它不是另一块板，不是一个独立版本，也不是一张独立作品。",
+          "senses": [
+            {
+              "id": "sense:ban:state",
+              "label": "套色版次：同一母版逐版递减的刻印状态/色层。"
+            },
+            {
+              "id": "sense:ban:state_exhausted",
+              "label": "版次终点：母版板面被刻尽，即‘版已经用完了’。"
+            },
+            {
+              "id": "sense:ban:sheet_count",
+              "label": "张数/印数：‘一张’指印出的纸张或成品张数，按张计数。"
+            },
+            {
+              "id": "sense:ban:edition",
+              "label": "出版物意义上的版本/版次：本批口述材料无证据采用。"
+            },
+            {
+              "id": "sense:ban:plate_or_version",
+              "label": "旧解释中未分化的‘一块板/一个版本’，修订后停止作为实体链接目标。"
+            }
+          ],
+          "review_rule": "修订术语不是全文替换：所有含‘版/板’字样，或链接到母版、刻版、套印、刻毁、红土事件的口述句、展厅稿、课堂稿与作品说明，都必须逐条重新判断实体链接，并留下复核结论；原始口述文字一律不改。"
+        }
+      }
+    ],
+    "descriptions": [
+      {
+        "id": "desc:c12:card",
+        "work_id": "work:c12",
+        "kind": "artwork_card",
+        "label": "C12 作品卡说明",
+        "raw_source_id": "w1",
+        "extra_source_ids": [
+          "p2"
+        ],
+        "current_text": "作品 C12：单块板多色套印。作品卡记周敏创作，贺昆导师；C12 署周敏个人名。",
+        "term_ids": [
+          "term:ban"
+        ]
+      },
+      {
+        "id": "desc:c12:technique",
+        "work_id": "work:c12",
+        "kind": "technique_card",
+        "label": "绝版木刻技术卡旧版说明（c1）",
+        "raw_source_id": "c1",
+        "extra_source_ids": [],
+        "current_text": "绝版木刻边刻边印、逐版递减，全部套色后母版刻毁，无法重复印制。",
+        "scope_warning": "c1 原文未标 C12 编号：它是技术语境卡，不是 C12 的原件编号记录。",
+        "term_ids": [
+          "term:ban"
+        ]
+      },
+      {
+        "id": "desc:c12:hall",
+        "work_id": "work:c12",
+        "kind": "hall_script",
+        "label": "C12 展厅说明与现行口述稿（g1 + h0）",
+        "raw_source_id": "g1",
+        "extra_source_ids": [],
+        "current_text": "展厅初稿 g1：贺昆刻出的最后一版最终摧毁了母版。现行口述稿 h0：最后一版印完，母版便毁了，贺昆在它上面刻出红土。",
+        "term_ids": [
+          "term:ban"
+        ]
+      }
+    ],
+    "card_views": [
+      {
+        "id": "view:c12:current",
+        "work_id": "work:c12",
+        "label": "C12 师生共展作品卡（含学员署名）",
+        "creation_display": "周敏 创作（C12 署周敏个人名）",
+        "byline_present": true,
+        "lineage_display": "贺昆为版画教师/导师；绝版木刻技艺由贺昆沿袭至学员周敏，师生共展。师承说明在任何署名改版中都必须保留。",
+        "ownership_statement": "学员署名只确认周敏的创作与署名关系；技艺沿袭与导师身份不构成创作权或所有权共有/转移。",
+        "source_ids": [
+          "w1",
+          "p2"
+        ]
+      }
+    ]
+  },
+  "curator_state": {
+    "schema": "woodcut-curator-state/1",
+    "adopted_term_versions": {
+      "term:ban": [
+        {
+          "version": 2,
+          "label": "修订术语解释",
+          "definition": "在绝版木刻中，‘版’首先指套色版次，即同一母版边刻边印、逐版递减过程中的一个刻印状态或色层；它不是另一块板，不是一个独立版本，也不是一张独立作品。",
+          "senses": [
+            {
+              "id": "sense:ban:state",
+              "label": "套色版次：同一母版逐版递减的刻印状态/色层。"
+            },
+            {
+              "id": "sense:ban:state_exhausted",
+              "label": "版次终点：母版板面被刻尽，即‘版已经用完了’。"
+            },
+            {
+              "id": "sense:ban:sheet_count",
+              "label": "张数/印数：‘一张’指印出的纸张或成品张数，按张计数。"
+            },
+            {
+              "id": "sense:ban:edition",
+              "label": "出版物意义上的版本/版次：本批口述材料无证据采用。"
+            },
+            {
+              "id": "sense:ban:plate_or_version",
+              "label": "旧解释中未分化的‘一块板/一个版本’，修订后停止作为实体链接目标。"
+            }
+          ],
+          "review_rule": "修订术语不是全文替换：所有含‘版/板’字样，或链接到母版、刻版、套印、刻毁、红土事件的口述句、展厅稿、课堂稿与作品说明，都必须逐条重新判断实体链接，并留下复核结论；原始口述文字一律不改。",
+          "adopted_by": "示范馆员",
+          "adopted_at": "2026-11-25T09:00:00+08:00"
+        }
+      ]
+    },
+    "current_term_versions": {
+      "term:ban": 2
+    },
+    "mention_reviews": {
+      "m:q1:last-ban": {
+        "state": "link_changed",
+        "chosen": [
+          "sense:ban:state"
+        ],
+        "note": "附近有 c1 逐版递减与 q1‘版已经用完了’，旧链接 plate_or_version 改为同一母版最后套色版次。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:q1:ban-used-up": {
+        "state": "confirmed",
+        "chosen": [
+          "sense:ban:state_exhausted",
+          "block:c12"
+        ],
+        "note": "‘用完’指母版板面被逐版刻尽；母版链接成立，但细化为终点状态而非纸张用完。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:q2:ta": {
+        "state": "open_candidates",
+        "chosen": [
+          "entity:unnamed:ta-q2",
+          "person:hekun"
+        ],
+        "note": "q2 说话人是贺昆，但引句用第三人称‘他’；不能因 g1 顺畅叙事就把‘他’固定为贺昆，两候选并存。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:q2:it": {
+        "state": "confirmed",
+        "chosen": [
+          "block:c12",
+          "state:c12:final"
+        ],
+        "note": "‘刻毁’与 c1‘母版刻毁’搭配一致，母版/最终状态为主链接；印纸候选搭配异常，留档不采。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:q2:red-earth": {
+        "state": "confirmed",
+        "chosen": [
+          "state:c12:red-earth-layer"
+        ],
+        "note": "红土作为色层/刀痕链接成立；处于哪一版次无完整语境与张号，ordinal 保持 unknown。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:g1:last-ban": {
+        "state": "link_changed",
+        "chosen": [
+          "sense:ban:state"
+        ],
+        "note": "停止把‘最后一版’实体化为贺昆刻出的另一块板或独立版本。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:g1:agent-hekun": {
+        "state": "disputed_claim",
+        "chosen": [
+          "person:hekun",
+          "entity:unnamed:ta-q2"
+        ],
+        "note": "贺昆只是 g1 的馆方断言；q2 的‘他’未坐实，行为人链接标争议，不覆盖口述原文。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:h0:last-ban": {
+        "state": "link_changed",
+        "chosen": [
+          "sense:ban:state"
+        ],
+        "note": "版次读法有 q1/c1 支持；‘张数’候选因无张号仅作弱候选保留。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:h0:it": {
+        "state": "open_candidates",
+        "chosen": [
+          "block:c12",
+          "entity:c12:sheet-prev"
+        ],
+        "note": "母版与上一张印纸两个候选同时保留：原句先言毁版再言在‘它’上刻，时序冲突，不能为让释文顺畅而固定为母版；句子应拆分重写。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      },
+      "m:h0:agent-hekun": {
+        "state": "disputed_claim",
+        "chosen": [
+          "person:hekun",
+          "entity:unnamed:ta-q2"
+        ],
+        "note": "‘贺昆刻出红土’是展厅句的主语安排，属馆方稿断言；与 q2 未具名‘他’一并展示。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_version": 2
+      }
+    },
+    "description_reviews": {
+      "desc:c12:card": {
+        "state": "confirmed",
+        "note": "w1/p2 互证周敏创作并署名、贺昆导师；术语细化不改变创作关系。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_versions": {
+          "term:ban": 2
+        }
+      },
+      "desc:c12:technique": {
+        "state": "confirmed",
+        "note": "c1 内容与 v2‘逐版递减、母版刻毁’一致；继续保留‘c1 未标 C12 编号’的范围警告。",
+        "reviewer": "示范馆员",
+        "reviewed_at": "2026-11-25T10:30:00+08:00",
+        "term_versions": {
+          "term:ban": 2
+        }
+      }
+    },
+    "releases": [
+      {
+        "id": "REL-HALL-C12-v1",
+        "audience": "hall_sound",
+        "target_id": "stmt:h0",
+        "title": "C12 展厅声音说明",
+        "body_markdown": "# C12 展厅声音说明（听障字幕同文）·初版\n\n## 一、口述者原意（逐字保留，含录音时间）\n\n- **周敏**｜录音时间 **00:43**（语句 `stmt:q1`，访谈 `int:zhou`）\n  > “边刻边印，最后一版的时候，版已经用完了。”\n  >\n  > 录音目录说明：据 a1：q1 说话人为周敏。\n- **贺昆**｜录音时间 **01:12**（语句 `stmt:q2`，访谈 `int:he`）\n  > “他把它刻毁了，这种红土出来的刀痕就不能再补。”\n  >\n  > 录音目录说明：据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。\n\n> 00:43、01:12 是**录音时间轴位置**，不是创作或刻版发生的历史日期；两段录音不属同一次访谈。\n\n## 二、馆方说明（馆方解释，不是口述者原话）\n\n**术语口径（v1 旧术语解释）**：‘版’指印版；‘最后一版’被解作最后刻出的一块板或一个完整版本，该版印完后母版被摧毁。\n\n**声音稿（初版，沿用展厅初稿 g1 与现行句 h0 的顺叙）**：\n\n> 最后一版印完，母版便毁了，贺昆在它上面刻出红土。\n\n_初版按旧术语把“最后一版”解作最后一块/一版，并把“它”顺指为母版、把行为人固定为贺昆。该处理仅为语句顺畅，术语修订后必须重新判断。_\n\n### 代词与术语链接复核（候选不得因顺句删除）\n\n- `m:h0:last-ban` 锚文字 **“最后一版”**（stmt:h0）\n  - 候选：套色版次：母版最后刻印状态｜支持度：strong\n  - 候选：张数：最后一张印纸（若附近有张号才能裁定）｜支持度：weak\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:h0:it` 锚文字 **“它”**（stmt:h0）\n  - 候选：母版（紧邻前词；‘在板上刻’与刻版动作相容）｜支持度：medium\n  - 候选：上一张印纸（若指印纸则应是套印关系，不能‘刻’纸；但原句本身时序矛盾，不能为此删除该候选）｜支持度：medium\n  - 术语修订前旧链接：`block:c12`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n  - 冲突记录：原句先言‘母版便毁了’，再言‘在它上面刻’：若‘它’=母版，则毁版之后不能再刻，时序自相矛盾；若‘它’=印纸，则与‘刻’的工具动作及 q2‘刀痕’不合。句子本身必须拆分重写，不能靠选定代词掩盖冲突。\n- `m:h0:agent-hekun` 锚文字 **“贺昆”**（stmt:h0）\n  - 候选：贺昆（展厅句断言的红土刻制行为人）｜支持度：museum_claim_only\n  - 候选：q2 的未具名‘他’，不能自动等同于贺昆｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q1:last-ban` 锚文字 **“最后一版”**（stmt:q1）\n  - 候选：套色版次：同一母版最后刻印状态/色层｜支持度：strong\n  - 候选：张数/印数：最后一张或最后一批印件｜支持度：weak\n  - 候选：出版物版本/版次｜支持度：unsupported\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q1:ban-used-up` 锚文字 **“版已经用完了”**（stmt:q1）\n  - 候选：逐版刻到终点，母版板面已被刻尽（‘用完’）｜支持度：strong\n  - 候选：纸张/印数用完｜支持度：unsupported\n  - 术语修订前旧链接：`entity:block:c12`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q2:ta` 锚文字 **“他”**（stmt:q2）\n  - 候选：未具名的男性刻者（语法上的第三人称，默认候选）｜支持度：strong\n  - 候选：贺昆以‘他’自指或泛称刻者（推测，无直接证据）｜支持度：speculative\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q2:it` 锚文字 **“它”**（stmt:q2）\n  - 候选：C12 母版（‘刻毁’与 c1‘母版刻毁’搭配一致）｜支持度：strong\n  - 候选：最后版次的板面状态（与母版同一实体的状态描述）｜支持度：medium\n  - 候选：印纸（‘刻毁纸张’搭配异常，仅保留为候选）｜支持度：weak\n  - 术语修订前旧链接：`block:c12`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q2:red-earth` 锚文字 **“红土”**（stmt:q2）\n  - 候选：名为‘红土’的套色色层/颜料及其刀痕｜支持度：strong\n  - 术语修订前旧链接：`state:c12:red-earth-layer`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:g1:last-ban` 锚文字 **“贺昆刻出的最后一版”**（stmt:g1）\n  - 候选：最后套色版次（同一母版的最终刻印状态）｜支持度：strong\n  - 候选：最后一块板/一个独立版本（旧解释，易导致把状态当成新实体）｜支持度：rejected_after_revision\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:g1:agent-hekun` 锚文字 **“贺昆刻出 / 摧毁”**（stmt:g1）\n  - 候选：贺昆（仅为 g1 的馆方断言；q2 原作‘他’，说话人虽为贺昆但不能直接划等号）｜支持度：museum_claim_only\n  - 候选：q2 中未具名的‘他’｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n\n## 证据与追溯\n\n- 回链 corpus 原始记录：`q1`, `q2`, `g1`, `c1`, `a1`, `w1`, `p2`\n- 追踪入口：`stmt:h0`（statement）\n- 追踪路径：\n  - 语句 stmt:h0（hall_script_current）\n  - stmt:h0 引用 -> stmt:q1\n  - stmt:h0 引用 -> stmt:q2\n  - stmt:h0 引用 -> stmt:g1\n  - 事件 event:c12:block-destroyed 证据 c1 -> 语句 stmt:c1\n",
+        "issuer": "示范馆员",
+        "issued_at": "2026-11-18T09:30:00+08:00",
+        "version": 1,
+        "term_version": 1,
+        "source_timestamps": [
+          {
+            "statement_id": "stmt:q1",
+            "speaker_id": "person:zhoumin",
+            "speaker": "周敏",
+            "timestamp": "00:43",
+            "interview_id": "int:zhou",
+            "verbatim": "边刻边印，最后一版的时候，版已经用完了。",
+            "interview_note": "据 a1：q1 说话人为周敏。"
+          },
+          {
+            "statement_id": "stmt:q2",
+            "speaker_id": "person:hekun",
+            "speaker": "贺昆",
+            "timestamp": "01:12",
+            "interview_id": "int:he",
+            "verbatim": "他把它刻毁了，这种红土出来的刀痕就不能再补。",
+            "interview_note": "据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。"
+          }
+        ],
+        "evidence_ids": [
+          "q1",
+          "q2",
+          "g1",
+          "c1",
+          "a1",
+          "w1",
+          "p2"
+        ],
+        "supersedes": null,
+        "status": "superseded"
+      },
+      {
+        "id": "REL-CLASS-C12-v1",
+        "audience": "classroom",
+        "target_id": "stmt:h0",
+        "title": "C12 课堂讲义",
+        "body_markdown": "# C12 课堂讲义（教师用）·初版\n\n## 一、口述者原意（逐字保留，含录音时间）\n\n- **周敏**｜录音时间 **00:43**（语句 `stmt:q1`，访谈 `int:zhou`）\n  > “边刻边印，最后一版的时候，版已经用完了。”\n  >\n  > 录音目录说明：据 a1：q1 说话人为周敏。\n- **贺昆**｜录音时间 **01:12**（语句 `stmt:q2`，访谈 `int:he`）\n  > “他把它刻毁了，这种红土出来的刀痕就不能再补。”\n  >\n  > 录音目录说明：据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。\n\n> 00:43、01:12 是**录音时间轴位置**，不是创作或刻版发生的历史日期；两段录音不属同一次访谈。\n\n## 二、馆方考订与教学说明（馆方解释，可与原话对照讲授）\n\n### 初版口径\n‘版’指印版；‘最后一版’被解作最后刻出的一块板或一个完整版本，该版印完后母版被摧毁。\n\n初版讲义沿用 l1 的“共同制作”表述与展厅句的固定代词链接；术语修订后需按本讲义新版对学生说明旧稿问题。\n\n### 6. 归属主张对照\n\n- `claim:l1-joint`（来源 `l1`，状态 **conflicting_unverified**）：教师示范后共同制作\n  - 处理：这是课程改写稿中的对立主张，原样保留并回链 l1；在没有示范记录、共同制作证据或原件题款之前，不得据此改写 w1/p2 所记的周敏创作与署名，也不得反向删除该主张。\n\n### 7. 相关事件年表（逻辑顺序，非确切日期）\n\n- `event:c12:overprint-last`【套印】最后版次套印（‘最后一版印完’）（证据：q1）\n- `event:c12:block-destroyed`【母版刻毁】全部套色后母版刻毁 / ‘把它刻毁了’（证据：c1, q2, g1）\n- `event:c12:carve-red-earth`【刻版】刻出‘红土’ / 红土色层刀痕不可补（证据：q2）\n- `event:c12:carve-process`【刻版】边刻边印、逐版递减的刻版过程（证据：q1, c1）\n- `event:c12:creation`【创作】C12 创作（构图/起稿与署名意义上的创作行为）（证据：w1, p2）\n- `event:c12:exhibit`【展览】师生共展（C12 参展）（证据：p2, w1）\n\n### 代词与术语链接复核（候选不得因顺句删除）\n\n- `m:h0:last-ban` 锚文字 **“最后一版”**（stmt:h0）\n  - 候选：套色版次：母版最后刻印状态｜支持度：strong\n  - 候选：张数：最后一张印纸（若附近有张号才能裁定）｜支持度：weak\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:h0:it` 锚文字 **“它”**（stmt:h0）\n  - 候选：母版（紧邻前词；‘在板上刻’与刻版动作相容）｜支持度：medium\n  - 候选：上一张印纸（若指印纸则应是套印关系，不能‘刻’纸；但原句本身时序矛盾，不能为此删除该候选）｜支持度：medium\n  - 术语修订前旧链接：`block:c12`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n  - 冲突记录：原句先言‘母版便毁了’，再言‘在它上面刻’：若‘它’=母版，则毁版之后不能再刻，时序自相矛盾；若‘它’=印纸，则与‘刻’的工具动作及 q2‘刀痕’不合。句子本身必须拆分重写，不能靠选定代词掩盖冲突。\n- `m:h0:agent-hekun` 锚文字 **“贺昆”**（stmt:h0）\n  - 候选：贺昆（展厅句断言的红土刻制行为人）｜支持度：museum_claim_only\n  - 候选：q2 的未具名‘他’，不能自动等同于贺昆｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q1:last-ban` 锚文字 **“最后一版”**（stmt:q1）\n  - 候选：套色版次：同一母版最后刻印状态/色层｜支持度：strong\n  - 候选：张数/印数：最后一张或最后一批印件｜支持度：weak\n  - 候选：出版物版本/版次｜支持度：unsupported\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q1:ban-used-up` 锚文字 **“版已经用完了”**（stmt:q1）\n  - 候选：逐版刻到终点，母版板面已被刻尽（‘用完’）｜支持度：strong\n  - 候选：纸张/印数用完｜支持度：unsupported\n  - 术语修订前旧链接：`entity:block:c12`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q2:ta` 锚文字 **“他”**（stmt:q2）\n  - 候选：未具名的男性刻者（语法上的第三人称，默认候选）｜支持度：strong\n  - 候选：贺昆以‘他’自指或泛称刻者（推测，无直接证据）｜支持度：speculative\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q2:it` 锚文字 **“它”**（stmt:q2）\n  - 候选：C12 母版（‘刻毁’与 c1‘母版刻毁’搭配一致）｜支持度：strong\n  - 候选：最后版次的板面状态（与母版同一实体的状态描述）｜支持度：medium\n  - 候选：印纸（‘刻毁纸张’搭配异常，仅保留为候选）｜支持度：weak\n  - 术语修订前旧链接：`block:c12`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:q2:red-earth` 锚文字 **“红土”**（stmt:q2）\n  - 候选：名为‘红土’的套色色层/颜料及其刀痕｜支持度：strong\n  - 术语修订前旧链接：`state:c12:red-earth-layer`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:g1:last-ban` 锚文字 **“贺昆刻出的最后一版”**（stmt:g1）\n  - 候选：最后套色版次（同一母版的最终刻印状态）｜支持度：strong\n  - 候选：最后一块板/一个独立版本（旧解释，易导致把状态当成新实体）｜支持度：rejected_after_revision\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n- `m:g1:agent-hekun` 锚文字 **“贺昆刻出 / 摧毁”**（stmt:g1）\n  - 候选：贺昆（仅为 g1 的馆方断言；q2 原作‘他’，说话人虽为贺昆但不能直接划等号）｜支持度：museum_claim_only\n  - 候选：q2 中未具名的‘他’｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**pending_rereview（等待逐条重判，不做全文替换）**\n\n## 证据与追溯\n\n- 回链 corpus 原始记录：`q1`, `q2`, `g1`, `c1`, `a1`, `w1`, `p2`\n- 追踪入口：`stmt:h0`（statement）\n- 追踪路径：\n  - 语句 stmt:h0（hall_script_current）\n  - stmt:h0 引用 -> stmt:q1\n  - stmt:h0 引用 -> stmt:q2\n  - stmt:h0 引用 -> stmt:g1\n  - 事件 event:c12:block-destroyed 证据 c1 -> 语句 stmt:c1\n",
+        "issuer": "示范馆员",
+        "issued_at": "2026-11-18T10:05:00+08:00",
+        "version": 1,
+        "term_version": 1,
+        "source_timestamps": [
+          {
+            "statement_id": "stmt:q1",
+            "speaker_id": "person:zhoumin",
+            "speaker": "周敏",
+            "timestamp": "00:43",
+            "interview_id": "int:zhou",
+            "verbatim": "边刻边印，最后一版的时候，版已经用完了。",
+            "interview_note": "据 a1：q1 说话人为周敏。"
+          },
+          {
+            "statement_id": "stmt:q2",
+            "speaker_id": "person:hekun",
+            "speaker": "贺昆",
+            "timestamp": "01:12",
+            "interview_id": "int:he",
+            "verbatim": "他把它刻毁了，这种红土出来的刀痕就不能再补。",
+            "interview_note": "据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。"
+          }
+        ],
+        "evidence_ids": [
+          "q1",
+          "q2",
+          "g1",
+          "c1",
+          "a1",
+          "w1",
+          "p2"
+        ],
+        "supersedes": null,
+        "status": "superseded"
+      },
+      {
+        "id": "REL-HALL-C12-v2",
+        "audience": "hall_sound",
+        "target_id": "stmt:h0",
+        "title": "C12 展厅声音说明",
+        "body_markdown": "# C12 展厅声音说明（听障字幕同文）·修订稿\n\n## 一、口述者原意（逐字保留，含录音时间）\n\n- **周敏**｜录音时间 **00:43**（语句 `stmt:q1`，访谈 `int:zhou`）\n  > “边刻边印，最后一版的时候，版已经用完了。”\n  >\n  > 录音目录说明：据 a1：q1 说话人为周敏。\n- **贺昆**｜录音时间 **01:12**（语句 `stmt:q2`，访谈 `int:he`）\n  > “他把它刻毁了，这种红土出来的刀痕就不能再补。”\n  >\n  > 录音目录说明：据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。\n\n> 00:43、01:12 是**录音时间轴位置**，不是创作或刻版发生的历史日期；两段录音不属同一次访谈。\n\n## 二、馆方说明（馆方解释，不是口述者原话）\n\n**术语口径（v2 修订术语解释）**：在绝版木刻中，‘版’首先指套色版次，即同一母版边刻边印、逐版递减过程中的一个刻印状态或色层；它不是另一块板，不是一个独立版本，也不是一张独立作品。\n\n“一张”按张数理解，指印出的纸张/成品；C12 没有登记张号，不能把“一张”进位成“一版”。\n\n**可录制声音稿（修订版；无证据的链接不坐实）**：\n\n> 这件 C12 是周敏创作并署名的套色木刻，贺昆是她的版画教师和作品导师。绝版木刻用同一块母版，边刻边印、逐版递减：每一套色是一个版次，刻去一层，就不能回头补版。周敏记得，“最后一版的时候，版已经用完了”。贺昆在另一次访谈里讲到“他把它刻毁了”，还讲到“红土”色层出来的刀痕没法再补。技术卡记载，全部套色之后母版刻毁，不能重复印制。\n>\n> 展厅旧句说“贺昆在它上面刻出红土”。句中的“它”，可能指母版，也可能指上一张印纸；而且旧句先说母版毁了、再说在“它”上面刻，顺序互相冲突。所以我们不把这句有矛盾的话当成制作顺序播讲：可以确定的是母版在最后阶段刻尽而毁；红土处在哪一个版次、贺昆话里的“他”是谁，目前没有张号或完整语境可以坐实，我们把不同说法一并保留。\n\n**受众处理**：听障字幕与配音同文；时间轴保留 00:43、01:12 两个录音点，字幕在两处分别标注说话人，不把两段不同访谈剪成同一现场对话。\n\n### 代词与术语链接复核（候选不得因顺句删除）\n\n- `m:h0:last-ban` 锚文字 **“最后一版”**（stmt:h0）\n  - 候选：套色版次：母版最后刻印状态｜支持度：strong\n  - 候选：张数：最后一张印纸（若附近有张号才能裁定）｜支持度：weak\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**link_changed**；结论链接：sense:ban:state\n    - 复核说明：版次读法有 q1/c1 支持；‘张数’候选因无张号仅作弱候选保留。\n- `m:h0:it` 锚文字 **“它”**（stmt:h0）\n  - 候选：母版（紧邻前词；‘在板上刻’与刻版动作相容）｜支持度：medium\n  - 候选：上一张印纸（若指印纸则应是套印关系，不能‘刻’纸；但原句本身时序矛盾，不能为此删除该候选）｜支持度：medium\n  - 术语修订前旧链接：`block:c12`（为顺畅叙事而固定，需重判）\n  - 本次复核：**open_candidates**；结论链接：block:c12、entity:c12:sheet-prev\n    - 复核说明：母版与上一张印纸两个候选同时保留：原句先言毁版再言在‘它’上刻，时序冲突，不能为让释文顺畅而固定为母版；句子应拆分重写。\n  - 冲突记录：原句先言‘母版便毁了’，再言‘在它上面刻’：若‘它’=母版，则毁版之后不能再刻，时序自相矛盾；若‘它’=印纸，则与‘刻’的工具动作及 q2‘刀痕’不合。句子本身必须拆分重写，不能靠选定代词掩盖冲突。\n- `m:h0:agent-hekun` 锚文字 **“贺昆”**（stmt:h0）\n  - 候选：贺昆（展厅句断言的红土刻制行为人）｜支持度：museum_claim_only\n  - 候选：q2 的未具名‘他’，不能自动等同于贺昆｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**disputed_claim**；结论链接：person:hekun、entity:unnamed:ta-q2\n    - 复核说明：‘贺昆刻出红土’是展厅句的主语安排，属馆方稿断言；与 q2 未具名‘他’一并展示。\n- `m:q1:last-ban` 锚文字 **“最后一版”**（stmt:q1）\n  - 候选：套色版次：同一母版最后刻印状态/色层｜支持度：strong\n  - 候选：张数/印数：最后一张或最后一批印件｜支持度：weak\n  - 候选：出版物版本/版次｜支持度：unsupported\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**link_changed**；结论链接：sense:ban:state\n    - 复核说明：附近有 c1 逐版递减与 q1‘版已经用完了’，旧链接 plate_or_version 改为同一母版最后套色版次。\n- `m:q1:ban-used-up` 锚文字 **“版已经用完了”**（stmt:q1）\n  - 候选：逐版刻到终点，母版板面已被刻尽（‘用完’）｜支持度：strong\n  - 候选：纸张/印数用完｜支持度：unsupported\n  - 术语修订前旧链接：`entity:block:c12`\n  - 本次复核：**confirmed**；结论链接：sense:ban:state_exhausted、block:c12\n    - 复核说明：‘用完’指母版板面被逐版刻尽；母版链接成立，但细化为终点状态而非纸张用完。\n- `m:q2:ta` 锚文字 **“他”**（stmt:q2）\n  - 候选：未具名的男性刻者（语法上的第三人称，默认候选）｜支持度：strong\n  - 候选：贺昆以‘他’自指或泛称刻者（推测，无直接证据）｜支持度：speculative\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**open_candidates**；结论链接：entity:unnamed:ta-q2、person:hekun\n    - 复核说明：q2 说话人是贺昆，但引句用第三人称‘他’；不能因 g1 顺畅叙事就把‘他’固定为贺昆，两候选并存。\n- `m:q2:it` 锚文字 **“它”**（stmt:q2）\n  - 候选：C12 母版（‘刻毁’与 c1‘母版刻毁’搭配一致）｜支持度：strong\n  - 候选：最后版次的板面状态（与母版同一实体的状态描述）｜支持度：medium\n  - 候选：印纸（‘刻毁纸张’搭配异常，仅保留为候选）｜支持度：weak\n  - 术语修订前旧链接：`block:c12`\n  - 本次复核：**confirmed**；结论链接：block:c12、state:c12:final\n    - 复核说明：‘刻毁’与 c1‘母版刻毁’搭配一致，母版/最终状态为主链接；印纸候选搭配异常，留档不采。\n- `m:q2:red-earth` 锚文字 **“红土”**（stmt:q2）\n  - 候选：名为‘红土’的套色色层/颜料及其刀痕｜支持度：strong\n  - 术语修订前旧链接：`state:c12:red-earth-layer`\n  - 本次复核：**confirmed**；结论链接：state:c12:red-earth-layer\n    - 复核说明：红土作为色层/刀痕链接成立；处于哪一版次无完整语境与张号，ordinal 保持 unknown。\n- `m:g1:last-ban` 锚文字 **“贺昆刻出的最后一版”**（stmt:g1）\n  - 候选：最后套色版次（同一母版的最终刻印状态）｜支持度：strong\n  - 候选：最后一块板/一个独立版本（旧解释，易导致把状态当成新实体）｜支持度：rejected_after_revision\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**link_changed**；结论链接：sense:ban:state\n    - 复核说明：停止把‘最后一版’实体化为贺昆刻出的另一块板或独立版本。\n- `m:g1:agent-hekun` 锚文字 **“贺昆刻出 / 摧毁”**（stmt:g1）\n  - 候选：贺昆（仅为 g1 的馆方断言；q2 原作‘他’，说话人虽为贺昆但不能直接划等号）｜支持度：museum_claim_only\n  - 候选：q2 中未具名的‘他’｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**disputed_claim**；结论链接：person:hekun、entity:unnamed:ta-q2\n    - 复核说明：贺昆只是 g1 的馆方断言；q2 的‘他’未坐实，行为人链接标争议，不覆盖口述原文。\n\n## 证据与追溯\n\n- 回链 corpus 原始记录：`q1`, `q2`, `g1`, `c1`, `a1`, `w1`, `p2`\n- 追踪入口：`stmt:h0`（statement）\n- 追踪路径：\n  - 语句 stmt:h0（hall_script_current）\n  - stmt:h0 引用 -> stmt:q1\n  - stmt:h0 引用 -> stmt:q2\n  - stmt:h0 引用 -> stmt:g1\n  - 事件 event:c12:block-destroyed 证据 c1 -> 语句 stmt:c1\n",
+        "issuer": "示范馆员",
+        "issued_at": "2026-11-25T15:00:00+08:00",
+        "version": 2,
+        "term_version": 2,
+        "source_timestamps": [
+          {
+            "statement_id": "stmt:q1",
+            "speaker_id": "person:zhoumin",
+            "speaker": "周敏",
+            "timestamp": "00:43",
+            "interview_id": "int:zhou",
+            "verbatim": "边刻边印，最后一版的时候，版已经用完了。",
+            "interview_note": "据 a1：q1 说话人为周敏。"
+          },
+          {
+            "statement_id": "stmt:q2",
+            "speaker_id": "person:hekun",
+            "speaker": "贺昆",
+            "timestamp": "01:12",
+            "interview_id": "int:he",
+            "verbatim": "他把它刻毁了，这种红土出来的刀痕就不能再补。",
+            "interview_note": "据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。"
+          }
+        ],
+        "evidence_ids": [
+          "q1",
+          "q2",
+          "g1",
+          "c1",
+          "a1",
+          "w1",
+          "p2"
+        ],
+        "supersedes": "REL-HALL-C12-v1",
+        "status": "issued"
+      },
+      {
+        "id": "REL-CLASS-C12-v2",
+        "audience": "classroom",
+        "target_id": "stmt:h0",
+        "title": "C12 课堂讲义",
+        "body_markdown": "# C12 课堂讲义（教师用）·术语修订版\n\n## 一、口述者原意（逐字保留，含录音时间）\n\n- **周敏**｜录音时间 **00:43**（语句 `stmt:q1`，访谈 `int:zhou`）\n  > “边刻边印，最后一版的时候，版已经用完了。”\n  >\n  > 录音目录说明：据 a1：q1 说话人为周敏。\n- **贺昆**｜录音时间 **01:12**（语句 `stmt:q2`，访谈 `int:he`）\n  > “他把它刻毁了，这种红土出来的刀痕就不能再补。”\n  >\n  > 录音目录说明：据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。\n\n> 00:43、01:12 是**录音时间轴位置**，不是创作或刻版发生的历史日期；两段录音不属同一次访谈。\n\n## 二、馆方考订与教学说明（馆方解释，可与原话对照讲授）\n\n### 1. 术语“版”的修订解释（v2）\n在绝版木刻中，‘版’首先指套色版次，即同一母版边刻边印、逐版递减过程中的一个刻印状态或色层；它不是另一块板，不是一个独立版本，也不是一张独立作品。\n\n- **版次/刻印状态**：绝版木刻同一母版逐版递减中的一个套色阶段，不是另一块板、另一作品。\n- **张数**：“一张”指印出的纸张；C12 只有作品编号、没有张号，张数不可考。\n- **版本（出版物意义）**：本批口述无证据采用。\n- 教学提醒：修订术语后不能只做全文替换；q2 全句没有“版”字，但因“刻毁/红土”链接到母版与版次事件，仍须重判。\n\n### 2. 人物与创作归属\n- 作品卡 w1 与 p2：**周敏创作、署个人名；贺昆为导师/版画教师**。\n- 师生共展与技艺沿袭把贺昆、周敏双方连到同一条绝版木刻技艺脉络，但**不把 C12 归为贺昆所有**。\n- l1 提出“教师示范后共同制作”，这是课程改写稿中的**对立主张（claim:l1-joint）**，在没有示范记录或共同制作证据前，不覆盖作品卡；可作为课堂史料对读问题。\n\n### 3. 事件不能折叠\n创作、刻版、套印、收藏、展览是不同事件；母版刻毁是刻版的终点，也单独登记。“最后版次状态”和此前各刻印状态属于同一块母版的不同阶段，不能折叠成“一张作品”的先后版本，也不能把红土色层擅自排到毁版之前或之后。收藏事件在现有语料中是材料缺口，不要替学生补造收藏故事。\n\n### 4. 课堂讨论：这个“它”指什么？\n展示 h0 原句与两个候选（母版 / 上一张印纸），让学生分别检验搭配与时序：\n若“它”是母版，则“母版便毁了”之后无法再刻；若“它”是印纸，则与“刻”和“刀痕”不合。结论应是：**句子本身需要拆分改写，候选可以并存，不能为了通顺替古人/口述者定指。**\n\n### 5. 从教学稿一键追溯\n对 `l1` 运行 `python -m woodcut trace l1`，可从“同文引用 q2”追到：\n- 贺昆 01:12 录音（访谈 int:he）；\n- a1 录音目录：q1 为周敏 00:43，两段不是同一次访谈；\n- C12 作品卡 w1/p2 与技术卡 c1（c1 未标 C12 编号，只作技术语境）。\n\n### 6. 归属主张对照\n\n- `claim:l1-joint`（来源 `l1`，状态 **conflicting_unverified**）：教师示范后共同制作\n  - 处理：这是课程改写稿中的对立主张，原样保留并回链 l1；在没有示范记录、共同制作证据或原件题款之前，不得据此改写 w1/p2 所记的周敏创作与署名，也不得反向删除该主张。\n\n### 7. 相关事件年表（逻辑顺序，非确切日期）\n\n- `event:c12:overprint-last`【套印】最后版次套印（‘最后一版印完’）（证据：q1）\n- `event:c12:block-destroyed`【母版刻毁】全部套色后母版刻毁 / ‘把它刻毁了’（证据：c1, q2, g1）\n- `event:c12:carve-red-earth`【刻版】刻出‘红土’ / 红土色层刀痕不可补（证据：q2）\n- `event:c12:carve-process`【刻版】边刻边印、逐版递减的刻版过程（证据：q1, c1）\n- `event:c12:creation`【创作】C12 创作（构图/起稿与署名意义上的创作行为）（证据：w1, p2）\n- `event:c12:exhibit`【展览】师生共展（C12 参展）（证据：p2, w1）\n\n### 代词与术语链接复核（候选不得因顺句删除）\n\n- `m:h0:last-ban` 锚文字 **“最后一版”**（stmt:h0）\n  - 候选：套色版次：母版最后刻印状态｜支持度：strong\n  - 候选：张数：最后一张印纸（若附近有张号才能裁定）｜支持度：weak\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**link_changed**；结论链接：sense:ban:state\n    - 复核说明：版次读法有 q1/c1 支持；‘张数’候选因无张号仅作弱候选保留。\n- `m:h0:it` 锚文字 **“它”**（stmt:h0）\n  - 候选：母版（紧邻前词；‘在板上刻’与刻版动作相容）｜支持度：medium\n  - 候选：上一张印纸（若指印纸则应是套印关系，不能‘刻’纸；但原句本身时序矛盾，不能为此删除该候选）｜支持度：medium\n  - 术语修订前旧链接：`block:c12`（为顺畅叙事而固定，需重判）\n  - 本次复核：**open_candidates**；结论链接：block:c12、entity:c12:sheet-prev\n    - 复核说明：母版与上一张印纸两个候选同时保留：原句先言毁版再言在‘它’上刻，时序冲突，不能为让释文顺畅而固定为母版；句子应拆分重写。\n  - 冲突记录：原句先言‘母版便毁了’，再言‘在它上面刻’：若‘它’=母版，则毁版之后不能再刻，时序自相矛盾；若‘它’=印纸，则与‘刻’的工具动作及 q2‘刀痕’不合。句子本身必须拆分重写，不能靠选定代词掩盖冲突。\n- `m:h0:agent-hekun` 锚文字 **“贺昆”**（stmt:h0）\n  - 候选：贺昆（展厅句断言的红土刻制行为人）｜支持度：museum_claim_only\n  - 候选：q2 的未具名‘他’，不能自动等同于贺昆｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**disputed_claim**；结论链接：person:hekun、entity:unnamed:ta-q2\n    - 复核说明：‘贺昆刻出红土’是展厅句的主语安排，属馆方稿断言；与 q2 未具名‘他’一并展示。\n- `m:q1:last-ban` 锚文字 **“最后一版”**（stmt:q1）\n  - 候选：套色版次：同一母版最后刻印状态/色层｜支持度：strong\n  - 候选：张数/印数：最后一张或最后一批印件｜支持度：weak\n  - 候选：出版物版本/版次｜支持度：unsupported\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**link_changed**；结论链接：sense:ban:state\n    - 复核说明：附近有 c1 逐版递减与 q1‘版已经用完了’，旧链接 plate_or_version 改为同一母版最后套色版次。\n- `m:q1:ban-used-up` 锚文字 **“版已经用完了”**（stmt:q1）\n  - 候选：逐版刻到终点，母版板面已被刻尽（‘用完’）｜支持度：strong\n  - 候选：纸张/印数用完｜支持度：unsupported\n  - 术语修订前旧链接：`entity:block:c12`\n  - 本次复核：**confirmed**；结论链接：sense:ban:state_exhausted、block:c12\n    - 复核说明：‘用完’指母版板面被逐版刻尽；母版链接成立，但细化为终点状态而非纸张用完。\n- `m:q2:ta` 锚文字 **“他”**（stmt:q2）\n  - 候选：未具名的男性刻者（语法上的第三人称，默认候选）｜支持度：strong\n  - 候选：贺昆以‘他’自指或泛称刻者（推测，无直接证据）｜支持度：speculative\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**open_candidates**；结论链接：entity:unnamed:ta-q2、person:hekun\n    - 复核说明：q2 说话人是贺昆，但引句用第三人称‘他’；不能因 g1 顺畅叙事就把‘他’固定为贺昆，两候选并存。\n- `m:q2:it` 锚文字 **“它”**（stmt:q2）\n  - 候选：C12 母版（‘刻毁’与 c1‘母版刻毁’搭配一致）｜支持度：strong\n  - 候选：最后版次的板面状态（与母版同一实体的状态描述）｜支持度：medium\n  - 候选：印纸（‘刻毁纸张’搭配异常，仅保留为候选）｜支持度：weak\n  - 术语修订前旧链接：`block:c12`\n  - 本次复核：**confirmed**；结论链接：block:c12、state:c12:final\n    - 复核说明：‘刻毁’与 c1‘母版刻毁’搭配一致，母版/最终状态为主链接；印纸候选搭配异常，留档不采。\n- `m:q2:red-earth` 锚文字 **“红土”**（stmt:q2）\n  - 候选：名为‘红土’的套色色层/颜料及其刀痕｜支持度：strong\n  - 术语修订前旧链接：`state:c12:red-earth-layer`\n  - 本次复核：**confirmed**；结论链接：state:c12:red-earth-layer\n    - 复核说明：红土作为色层/刀痕链接成立；处于哪一版次无完整语境与张号，ordinal 保持 unknown。\n- `m:g1:last-ban` 锚文字 **“贺昆刻出的最后一版”**（stmt:g1）\n  - 候选：最后套色版次（同一母版的最终刻印状态）｜支持度：strong\n  - 候选：最后一块板/一个独立版本（旧解释，易导致把状态当成新实体）｜支持度：rejected_after_revision\n  - 术语修订前旧链接：`sense:ban:plate_or_version`\n  - 本次复核：**link_changed**；结论链接：sense:ban:state\n    - 复核说明：停止把‘最后一版’实体化为贺昆刻出的另一块板或独立版本。\n- `m:g1:agent-hekun` 锚文字 **“贺昆刻出 / 摧毁”**（stmt:g1）\n  - 候选：贺昆（仅为 g1 的馆方断言；q2 原作‘他’，说话人虽为贺昆但不能直接划等号）｜支持度：museum_claim_only\n  - 候选：q2 中未具名的‘他’｜支持度：open\n  - 术语修订前旧链接：`person:hekun`（为顺畅叙事而固定，需重判）\n  - 本次复核：**disputed_claim**；结论链接：person:hekun、entity:unnamed:ta-q2\n    - 复核说明：贺昆只是 g1 的馆方断言；q2 的‘他’未坐实，行为人链接标争议，不覆盖口述原文。\n\n## 证据与追溯\n\n- 回链 corpus 原始记录：`q1`, `q2`, `g1`, `c1`, `a1`, `w1`, `p2`\n- 追踪入口：`stmt:h0`（statement）\n- 追踪路径：\n  - 语句 stmt:h0（hall_script_current）\n  - stmt:h0 引用 -> stmt:q1\n  - stmt:h0 引用 -> stmt:q2\n  - stmt:h0 引用 -> stmt:g1\n  - 事件 event:c12:block-destroyed 证据 c1 -> 语句 stmt:c1\n",
+        "issuer": "示范馆员",
+        "issued_at": "2026-11-25T15:20:00+08:00",
+        "version": 2,
+        "term_version": 2,
+        "source_timestamps": [
+          {
+            "statement_id": "stmt:q1",
+            "speaker_id": "person:zhoumin",
+            "speaker": "周敏",
+            "timestamp": "00:43",
+            "interview_id": "int:zhou",
+            "verbatim": "边刻边印，最后一版的时候，版已经用完了。",
+            "interview_note": "据 a1：q1 说话人为周敏。"
+          },
+          {
+            "statement_id": "stmt:q2",
+            "speaker_id": "person:hekun",
+            "speaker": "贺昆",
+            "timestamp": "01:12",
+            "interview_id": "int:he",
+            "verbatim": "他把它刻毁了，这种红土出来的刀痕就不能再补。",
+            "interview_note": "据 a1：q2 为贺昆；q1、q2 两段不是同一次访谈，不能互相借用上下文或代词所指。"
+          }
+        ],
+        "evidence_ids": [
+          "q1",
+          "q2",
+          "g1",
+          "c1",
+          "a1",
+          "w1",
+          "p2"
+        ],
+        "supersedes": "REL-CLASS-C12-v1",
+        "status": "issued"
+      }
+    ],
+    "update_decisions": {
+      "REL-HALL-C12-v1": {
+        "action": "issue_revision",
+        "new_release_id": "REL-HALL-C12-v2",
+        "decided_by": "示范馆员",
+        "decided_at": "2026-11-25T15:00:00+08:00"
+      },
+      "REL-CLASS-C12-v1": {
+        "action": "issue_revision",
+        "new_release_id": "REL-CLASS-C12-v2",
+        "decided_by": "示范馆员",
+        "decided_at": "2026-11-25T15:20:00+08:00"
+      }
+    },
+    "card_view_overrides": {
+      "view:c12:current": {
+        "id": "view:c12:current",
+        "work_id": "work:c12",
+        "label": "C12 师生共展作品卡（含学员署名）",
+        "creation_display": "周敏 创作（C12 署周敏个人名）",
+        "byline_present": true,
+        "lineage_display": "贺昆为版画教师/导师；绝版木刻技艺由贺昆沿袭至学员周敏，师生共展。师承说明在任何署名改版中都必须保留。",
+        "ownership_statement": "学员署名只确认周敏的创作与署名关系；技艺沿袭与导师身份不构成创作权或所有权共有/转移。",
+        "source_ids": [
+          "w1",
+          "p2"
+        ],
+        "byline_change_note": "增加学员署名只改变创作关系展示；已有师承说明与技艺沿袭不得消去。",
+        "byline_updated_by": "示范馆员",
+        "byline_updated_at": "2026-11-25T10:30:00+08:00"
+      }
+    }
+  },
+  "review_queue": {
+    "term_id": "term:ban",
+    "term_version": 2,
+    "pending_mentions": [],
+    "pending_descriptions": [
+      {
+        "id": "desc:c12:hall",
+        "label": "C12 展厅说明与现行口述稿（g1 + h0）",
+        "kind": "hall_script"
+      }
+    ]
+  },
+  "pending_descriptions": [
+    {
+      "id": "desc:c12:hall",
+      "label": "C12 展厅说明与现行口述稿（g1 + h0）",
+      "kind": "hall_script"
+    }
+  ],
+  "releases_overview": [
+    {
+      "id": "REL-HALL-C12-v1",
+      "audience": "hall_sound",
+      "version": 1,
+      "status": "superseded",
+      "issuer": "示范馆员",
+      "issued_at": "2026-11-18T09:30:00+08:00",
+      "term_version": 1,
+      "stale": true,
+      "update_decision": {
+        "action": "issue_revision",
+        "new_release_id": "REL-HALL-C12-v2",
+        "decided_by": "示范馆员",
+        "decided_at": "2026-11-25T15:00:00+08:00"
+      }
+    },
+    {
+      "id": "REL-CLASS-C12-v1",
+      "audience": "classroom",
+      "version": 1,
+      "status": "superseded",
+      "issuer": "示范馆员",
+      "issued_at": "2026-11-18T10:05:00+08:00",
+      "term_version": 1,
+      "stale": true,
+      "update_decision": {
+        "action": "issue_revision",
+        "new_release_id": "REL-CLASS-C12-v2",
+        "decided_by": "示范馆员",
+        "decided_at": "2026-11-25T15:20:00+08:00"
+      }
+    },
+    {
+      "id": "REL-HALL-C12-v2",
+      "audience": "hall_sound",
+      "version": 2,
+      "status": "issued",
+      "issuer": "示范馆员",
+      "issued_at": "2026-11-25T15:00:00+08:00",
+      "term_version": 2,
+      "stale": false,
+      "update_decision": null
+    },
+    {
+      "id": "REL-CLASS-C12-v2",
+      "audience": "classroom",
+      "version": 2,
+      "status": "issued",
+      "issuer": "示范馆员",
+      "issued_at": "2026-11-25T15:20:00+08:00",
+      "term_version": 2,
+      "stale": false,
+      "update_decision": null
+    }
+  ]
+}
